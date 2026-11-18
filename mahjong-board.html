@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex"><title>HDS Mahjong Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root { --bg:#fbf8f7; --surface:#fff; --ink:#2a2426; --muted:#6f6467; --line:#ebe2e0; --blush:#d9788f; --blush-soft:#f7e3e7;
+  --sage:#5f8a6e; --sage-soft:#e3eee6; --amber:#b07a1e; --amber-soft:#f6ecd8; --slate:#6b7280; --slate-soft:#eef0f2;
+  --f-display:"Bricolage Grotesque","Inter",system-ui,sans-serif; --f-body:"Inter",system-ui,-apple-system,sans-serif; --f-data:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1b1719; --surface:#241f21; --ink:#f1eaeb; --muted:#ab9fa2; --line:#3a3235;
+  --blush:#ec97ab; --blush-soft:#3d2730; --sage:#8fbd9d; --sage-soft:#23332a; --amber:#ddb065; --amber-soft:#3a2f1c; --slate:#a3a9b3; --slate-soft:#2c2f34; color-scheme:dark; } }
+:root[data-theme="dark"] { --bg:#1b1719; --surface:#241f21; --ink:#f1eaeb; --muted:#ab9fa2; --line:#3a3235; --blush:#ec97ab; --blush-soft:#3d2730;
+  --sage:#8fbd9d; --sage-soft:#23332a; --amber:#ddb065; --amber-soft:#3a2f1c; --slate:#a3a9b3; --slate-soft:#2c2f34; color-scheme:dark; }
+:root { padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px) }
+* { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:15px; line-height:1.55 }
+.wrap { max-width:1080px; margin:0 auto; padding-block:40px 64px; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); display:grid; gap:36px }
+.kicker { font-family:var(--f-data); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 10px }
+h1 { font-family:var(--f-display); font-weight:800; font-size:clamp(32px,6vw,52px); line-height:1.04; margin:0; letter-spacing:-.02em; text-wrap:balance }
+h1 em { font-style:normal; color:var(--blush) }
+h2 { font-family:var(--f-display); font-weight:600; font-size:22px; margin:0 0 4px }
+.lede { max-width:66ch; color:var(--muted); margin:14px 0 0; font-size:16px } .lede strong { color:var(--ink) }
+.note { color:var(--muted); margin:0 0 14px; max-width:72ch }
+.titles { list-style:none; padding:0; margin:0; display:grid; gap:8px }
+.titles li { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-weight:500 }
+.grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:12px }
+.item { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px; display:grid; gap:6px; min-width:0 }
+.item a { color:var(--ink); text-decoration:none; font-weight:500; overflow-wrap:anywhere } .item a:hover { text-decoration:underline }
+.top { display:flex; justify-content:space-between; align-items:center }
+.price { font-family:var(--f-data); font-size:17px }
+.role { font-family:var(--f-data); font-size:11px; padding:2px 8px; border-radius:99px; text-transform:uppercase; letter-spacing:.05em }
+.role.hero { background:var(--blush-soft); color:var(--blush) } .role.impulse { background:var(--sage-soft); color:var(--sage) } .role.add-on { background:var(--slate-soft); color:var(--slate) }
+.meta { display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12.5px; color:var(--muted) }
+.cc { color:var(--amber); font-weight:600 }
+.asin { font-family:var(--f-data); font-size:11px; color:var(--muted) }
+.rules { font-size:13.5px; color:var(--muted); max-width:75ch; display:grid; gap:6px } .rules p { margin:0 }
+a:focus-visible { outline:2px solid var(--blush); outline-offset:2px }
+</style></head><body><main class="wrap">
+<section>
+  <p class="kicker">HowDoesShe · Board draft · prices checked November 18, 2026</p>
+  <h1>The <em>mahjong</em> board</h1>
+  <p class="lede">Mahjong searches are at their 12-month high and up 67% on the same weeks last year (Google Trends, US). 31 products, every one Prime, in stock and rated 4.2 stars or better with 100+ ratings. <strong>9 are Creator Connections picks at 20 to 30% commission.</strong> The rest are the best-rated listings for the slots those campaigns can't fill, like the hero tile sets.</p>
+</section>
+<section><h2>Board title options</h2><p class="note">House voice: curiosity, first person, emoji. Drafts for Alison to pick from.</p>
+<ul class="titles"><li>The mahjong night gift list (not just game night) 🀄</li><li>Everything my mahjong girls actually use 🀄</li><li>New to mahjong? Start here 🀄</li><li>What&#x27;s in my mahjong bag? 👜</li><li>Stocking stuffers for your mahjong friends 🎄</li></ul></section>
+<section><h2>The set</h2><p class="note">Hero picks. The full American set is the big-ticket item that carries the cart.</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role hero">hero</span><span class="price">$138.99</span></div>
+  <a href="https://www.amazon.com/dp/B0H6JF92DR?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">American Mahjong Tile Set - 4 Layer Acrylic Mah Jongg Game Set, Tortoise | Luxury Travel Mahjong Set with Carr...</a>
+  <div class="meta"><span>4.8★ · 2,597 ratings · Prime</span></div>
+  <div class="asin">B0H6JF92DR</div>
+</li><li class="item">
+  <div class="top"><span class="role hero">hero</span><span class="price">$79.79</span></div>
+  <a href="https://www.amazon.com/dp/B0D2RDXKHF?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">GUSTARIA American Mahjong Game Set, 166 Quality White Tiles, 4 All-in-One Color Rack/Pushers, Mahjong Tile Set...</a>
+  <div class="meta"><span>4.8★ · 1,357 ratings · Prime</span></div>
+  <div class="asin">B0D2RDXKHF</div>
+</li><li class="item">
+  <div class="top"><span class="role hero">hero</span><span class="price">$69.79</span></div>
+  <a href="https://www.amazon.com/dp/B0D2TVXS2W?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Jongyance American Mahjong Set with Blue Carrying Bag, 166 White Tiles, 4 All-in-One Rack/Pushers, Mahjong Til...</a>
+  <div class="meta"><span>4.8★ · 1,027 ratings · Prime</span></div>
+  <div class="asin">B0D2TVXS2W</div>
+</li><li class="item">
+  <div class="top"><span class="role hero">hero</span><span class="price">$175.99</span></div>
+  <a href="https://www.amazon.com/dp/B01070AYTY?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Yellow Mountain Imports American Mahjong Set, Mojave (Ivory) with Brown Soft Case, All-in-One Racks with Pushe...</a>
+  <div class="meta"><span>4.6★ · 957 ratings · Prime</span></div>
+  <div class="asin">B01070AYTY</div>
+</li><li class="item">
+  <div class="top"><span class="role hero">hero</span><span class="price">$199.95</span></div>
+  <a href="https://www.amazon.com/dp/B00H2QX94E?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Linda Li New! - American Mahjong Set 166 Premium White Tiles, 4 All-in-One Rack/Pushers, Blue Paisley Soft Bag...</a>
+  <div class="meta"><span>4.7★ · 1,191 ratings · Prime</span></div>
+  <div class="asin">B00H2QX94E</div>
+</li></ul></section><section><h2>The table</h2><p class="note">Mats and racks with pushers. Several are 20% Creator Connections picks.</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$30.99</span></div>
+  <a href="https://www.amazon.com/dp/B004ADUXNC?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Yellow Mountain Imports Multi-Purpose Table Cover for Mahjong, Poker, Card Games, Board Games, Tile Games, and...</a>
+  <div class="meta"><span>4.7★ · 2,897 ratings · Prime</span></div>
+  <div class="asin">B004ADUXNC</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$31.99</span></div>
+  <a href="https://www.amazon.com/dp/B0FG2WYSZB?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">SiDreea Mahjong Mat for Table 32.4 x 32.4 inch, 3mm Thick American Mahjong Mat with Charleston Rules, Non-Slip...</a>
+  <div class="meta"><span>4.6★ · 136 ratings · Prime</span><span class="cc">20% commission, ends 2027-02-28</span></div>
+  <div class="asin">B0FG2WYSZB</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$25.89</span></div>
+  <a href="https://www.amazon.com/dp/B0G48KK6Q7?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Mahjong Mat for Table,CUFURNIX 31.5&#x27;&#x27;x31.5&#x27;&#x27; Non-Slip &amp; Noise Reduction Mahjong Mat with Rules,Mah Jongg Gift ...</a>
+  <div class="meta"><span>4.4★ · 220 ratings · Prime</span><span class="cc">20% commission, ends 2026-12-31</span></div>
+  <div class="asin">B0G48KK6Q7</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$25.99</span></div>
+  <a href="https://www.amazon.com/dp/B0GK9J5L7W?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">American Mahjong Mat with Rules for Table Portable Blue Mahjong Pad Set | 32&quot; x 32&quot; Thickened Anti-Slip Noise ...</a>
+  <div class="meta"><span>4.2★ · 349 ratings · Prime</span><span class="cc">20% commission, ends 2027-01-31</span></div>
+  <div class="asin">B0GK9J5L7W</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$24.99</span></div>
+  <a href="https://www.amazon.com/dp/B0FJ8TQ69B?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Sonwyoung Beige and White Floral Chinoiserie Mahjong Mat 31.5&quot; x 31.5&quot; | with 1 Carrying Bag, Rubber Anti Slip...</a>
+  <div class="meta"><span>4.4★ · 411 ratings · Prime</span></div>
+  <div class="asin">B0FJ8TQ69B</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$29.99</span></div>
+  <a href="https://www.amazon.com/dp/B0H37LJLPC?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Acrylic Mahjong Racks with Pushers 17.5 Inch Green Mah Jong Racks, Set of 4 | Clear mahjong racks with pushers...</a>
+  <div class="meta"><span>4.4★ · 101 ratings · Prime</span><span class="cc">20% commission, ends 2027-10-02</span></div>
+  <div class="asin">B0H37LJLPC</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$23.99</span></div>
+  <a href="https://www.amazon.com/dp/B0GCNCZNVT?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Gigeeei Clear Mahjong Racks with Pushers Set of 4 | 4 Color Clear Mahjong Tile Racks with storage bag, portabl...</a>
+  <div class="meta"><span>4.3★ · 156 ratings · Prime</span><span class="cc">20% commission, ends 2027-04-30</span></div>
+  <div class="asin">B0GCNCZNVT</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$21.84</span></div>
+  <a href="https://www.amazon.com/dp/B0G1M6HQ8M?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Premium Clear Mahjong Racks with Pushers,4-Pack Non-Slip Acrylic Racks | Non-Slip Base Design,Gift-Ready Packa...</a>
+  <div class="meta"><span>4.5★ · 605 ratings · Prime</span></div>
+  <div class="asin">B0G1M6HQ8M</div>
+</li></ul></section><section><h2>The 2026 card</h2><p class="note">&quot;2026 mahjong card&quot; is a Breakout search right now. The card itself comes from the National Mah Jongg League, not Amazon, so these are the holders, sleeves and helpers that go with it.</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$15.99</span></div>
+  <a href="https://www.amazon.com/dp/B0GVY5BPP5?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Vegan Leather Mahjong Card Holder, Gift Box Included,8.6*6.3IN, Navy Blue | Mahjong Card Sleeve,Waterproof, Fi...</a>
+  <div class="meta"><span>4.9★ · 103 ratings · Prime</span><span class="cc">20% commission, ends 2027-04-30</span></div>
+  <div class="asin">B0GVY5BPP5</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$8.99</span></div>
+  <a href="https://www.amazon.com/dp/B0FRSSG8FZ?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Protective Sleeve for 2025-2026 Mahjong Cards - Size (6 1/8&quot; x 4 3/4&quot;) - Large-Size Mahjong Card Protective Sl...</a>
+  <div class="meta"><span>4.6★ · 308 ratings · Prime</span><span class="cc">30% commission, ends 2027-01-04</span></div>
+  <div class="asin">B0FRSSG8FZ</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$12.86</span></div>
+  <a href="https://www.amazon.com/dp/B0D62N6QW6?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Mahjong Card Sleeve，Mahjong Accessories, Fit NMJL Large Size Card -4Pack | Protective Sleeve,No harsh glare,Sp...</a>
+  <div class="meta"><span>4.7★ · 401 ratings · Prime</span></div>
+  <div class="asin">B0D62N6QW6</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$5.99</span></div>
+  <a href="https://www.amazon.com/dp/B0FGMSW692?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">320 pcs Mahjong Card Line Finder Highlighter Tape, Mahjong Line Highlighter Stripe, Transparent Sticky Card Ma...</a>
+  <div class="meta"><span>4.8★ · 596 ratings · Prime</span></div>
+  <div class="asin">B0FGMSW692</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$21.99</span></div>
+  <a href="https://www.amazon.com/dp/B0FMJXJVZN?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">bqw 2026 Mah Jongg Learning Sheets Visual Reference Guide 72 Hands Mah Jongg Learning Aid</a>
+  <div class="meta"><span>4.6★ · 108 ratings · Prime</span></div>
+  <div class="asin">B0FMJXJVZN</div>
+</li></ul></section><section><h2>Carry it</h2><p class="note">Tile bags and cases. &quot;Mahjong bag&quot; style searches are rising, and most of these are $15 to $30 impulse buys.</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$15.99</span></div>
+  <a href="https://www.amazon.com/dp/B0GL7YSZGF?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Sunnymove Mahjong Tile Bag Women Gifts Orange Pink Thick Lines | Dumpling Bag Mahjong Gift for Woman Woven Clu...</a>
+  <div class="meta"><span>4.8★ · 237 ratings · Prime</span></div>
+  <div class="asin">B0GL7YSZGF</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$27.99</span></div>
+  <a href="https://www.amazon.com/dp/B0F7L914MP?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Popvibe Clear Makeup Bag Mahjong Tile Bag with Zipper and Handle Sage Green | Structured Large Travel Makeup B...</a>
+  <div class="meta"><span>4.7★ · 200 ratings · Prime</span></div>
+  <div class="asin">B0F7L914MP</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$29.79</span></div>
+  <a href="https://www.amazon.com/dp/B0F1Y6KZ7D?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">GUSTARIA Blue American Mahjong Game Set Bag with Protective Sleeves for Racks, Pushers, and Tiles (Case Only)</a>
+  <div class="meta"><span>4.6★ · 368 ratings · Prime</span></div>
+  <div class="asin">B0F1Y6KZ7D</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$18.79</span></div>
+  <a href="https://www.amazon.com/dp/B0CNJZYVB6?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">GUSTARIA Empty Mahjong Tiles Bag,Suitable for 1.2 &quot;(30mm) standard size American mahjong tiles,Thickened Blue ...</a>
+  <div class="meta"><span>4.7★ · 204 ratings · Prime</span></div>
+  <div class="asin">B0CNJZYVB6</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$9.99</span></div>
+  <a href="https://www.amazon.com/dp/B0GGXYSSBB?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">magic sewing machine Storage Bag for Mahjong Racks and Pushers, 2 Compartments Fits 4 Racks – Velvet Drawstrin...</a>
+  <div class="meta"><span>4.6★ · 177 ratings · Prime</span></div>
+  <div class="asin">B0GGXYSSBB</div>
+</li></ul></section><section><h2>Gifts for her mahjong girls</h2><p class="note">For the friend she plays with every week. The dish towels are a supporting item only (kitchen never leads a board).</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$42.95</span></div>
+  <a href="https://www.amazon.com/dp/B0F3DR6H64?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Swig Life 32oz Insulated Tumbler with Lid, Mahjong | Triple Insulated Stainless Steel - Lid Included - Keeps D...</a>
+  <div class="meta"><span>4.6★ · 934 ratings · Prime</span><span class="cc">20% commission, ends 2026-12-31</span></div>
+  <div class="asin">B0F3DR6H64</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$42.95</span></div>
+  <a href="https://www.amazon.com/dp/B0F3DH3K8H?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Swig Life 22oz Insulated Travel Mug with Handle &amp; Lid, Mahjong | Triple Insulated Stainless Steel - Handle &amp; L...</a>
+  <div class="meta"><span>4.7★ · 904 ratings · Prime</span></div>
+  <div class="asin">B0F3DH3K8H</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$23.99</span></div>
+  <a href="https://www.amazon.com/dp/B0H7KT935T?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Sweet Water Decor Mahjong Coffee Mug, 14oz Fine Bone China Cup | Colorful Tile Pattern with Gold Rim &amp; Handle,...</a>
+  <div class="meta"><span>4.8★ · 2,529 ratings · Prime</span></div>
+  <div class="asin">B0H7KT935T</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$11.98</span></div>
+  <a href="https://www.amazon.com/dp/B07V5G3FLW?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">Elufly Creative Mah Jong Print Novelty Cotton Crew Socks Pack of 3 for Men Women (Mahjong print-Grey 3pcs)</a>
+  <div class="meta"><span>4.5★ · 274 ratings · Prime</span></div>
+  <div class="asin">B07V5G3FLW</div>
+</li><li class="item">
+  <div class="top"><span class="role impulse">impulse</span><span class="price">$15.29</span></div>
+  <a href="https://www.amazon.com/dp/B0FRSL2YKP?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">R HORSE Mahjong Kitchen Dish Towel - 5Pcs Mahjong Cleaning Dishcloth Funny Absorbent Bar Quick Dry Hand Towel ...</a>
+  <div class="meta"><span>4.5★ · 1,520 ratings · Prime</span></div>
+  <div class="asin">B0FRSL2YKP</div>
+</li></ul></section><section><h2>Christmas</h2><p class="note">Ornaments and party napkins for December mahjong nights. The napkin campaign ends Dec 19.</p><ul class="grid"><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$11.99</span></div>
+  <a href="https://www.amazon.com/dp/B0HK7MF4YB?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">WaaHome Mahjong Christmas Ornaments 2026 Unique Mahjong Gifts for Women | Merry Mahjong Keepsake Ornaments for...</a>
+  <div class="meta"><span>4.6★ · 2,369 ratings · Prime</span></div>
+  <div class="asin">B0HK7MF4YB</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$8.96</span></div>
+  <a href="https://www.amazon.com/dp/B0FY8Y4Q21?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">ZAGKOO Mahjong Christmas Ornament 2026 - Mahjong Gifts for Women, Men | Gift for Ma hjong Players, Friends - M...</a>
+  <div class="meta"><span>4.7★ · 239 ratings · Prime</span></div>
+  <div class="asin">B0FY8Y4Q21</div>
+</li><li class="item">
+  <div class="top"><span class="role add-on">add-on</span><span class="price">$6.99</span></div>
+  <a href="https://www.amazon.com/dp/B0HC73W21K?tag=hodosh-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener">NatNarr 50 Pk Christmas Mahjong Napkins Merry Mahjong Gifts, 6.5 Inch | Christmas Mahjong Cockatil Napkins Mah...</a>
+  <div class="meta"><span>4.6★ · 204 ratings · Prime</span><span class="cc">30% commission, ends 2026-12-19</span></div>
+  <div class="asin">B0HC73W21K</div>
+</li></ul></section>
+<section class="rules">
+  <p><strong>Before it goes live:</strong> prices, ratings and stock change daily, so check each listing once more when the board is built, and keep only free-shipping items (all are Prime as of today). Commission terms come from the 11-14 portal export: confirm each campaign is still open in the portal.</p>
+  <p>Links carry the hodosh-20 tag. Sources: Amazon Creators API (price, stock), Canopy (ratings, Prime), Creator Connections export (commission, end dates), Google Trends (search interest).</p>
+</section>
+</main></body></html>
